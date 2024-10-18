@@ -5,11 +5,14 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer'
 
 
 // Example imports (for later):
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import movieDetails from '../data/movie_details';
 
-
+// we want to update the mockdata with the correct vote count
+// when we increment and decrement vote
+// target an individual poster component
 function App() {
+
   return (
     <main className='App'>
       <h1>rancid Tomatillos</h1>
