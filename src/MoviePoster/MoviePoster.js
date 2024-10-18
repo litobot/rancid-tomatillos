@@ -1,11 +1,11 @@
 import './MoviePoster.css';
 
-function MoviePoster() {
+const MoviePoster = ({ posterPath , voteCount }) => {
   return (
-    <section className='MoviePoster'>
-      <p>This is a movie poster.</p>
-    </section>
+    <div className="movie-card">
+      <img src={posterPath} className="movie-poster" />
+      <p className='vote-count'>{voteCount}</p>
+    </div>
   );
-}
-
+};
 export default MoviePoster;
