@@ -2,8 +2,9 @@ import './MoviePoster.css';
 import upVote from '../icons/upvote.png'
 import downVote from '../icons/downvote.png'
 import { useState } from 'react';
+import Header from '../Header/Header';
 
-const MoviePoster = ({ posterPath , voteCount, incrementVote, decrementVote }) => {
+const MoviePoster = ({ posterPath , voteCount, incrementVote, decrementVote, toMovieDetails }) => {
   const [votes, setVotes] = useState(voteCount)
 
   function incrementVote(){
@@ -16,7 +17,7 @@ const MoviePoster = ({ posterPath , voteCount, incrementVote, decrementVote }) =
 
   return (
     <div className="movie-card">
-      <img src={posterPath} className="movie-poster" />
+      <img src={ posterPath } onClick={ toMovieDetails } className="movie-poster" />
       <div className='vote-section'>
         <img src={ upVote } onClick={ incrementVote } />
         <p className='vote-count'>{votes}</p>
