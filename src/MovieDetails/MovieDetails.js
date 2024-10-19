@@ -1,6 +1,7 @@
 import './MovieDetails.css';
 
-function MovieDetails({ details }) {
+function MovieDetails({details}) {
+  console.log(details)
   return (
     <div>
       <div className='movie-details'>
