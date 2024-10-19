@@ -37,10 +37,12 @@ const [posters, setPosters] = useState([])
       return response.json()
     })
     .then(posterData => setPosters([...posterData]))
-  }
+  };
+  
   useEffect(() => {
     fetchMoviePosters();
-  }, [])
+  }, []);
+  
   return (
     <main className='App'>
       <div className='header'>
