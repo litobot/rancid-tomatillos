@@ -12,15 +12,35 @@ import { useState, useEffect } from 'react';
 
 function App() {
 const [selectedMovie, setSelectedMovie] = useState(null);
+const [posters, setPosters] = useState([])
 
   const handleMovieSelect = (movie) => {
-    setSelectedMovie(movie);
+    console.log(movie)
+    fetch(`https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies/${movie.id}`)
+    .then(response => response.json())
+    .then(movieDetails => {
+      console.log('movieDetails', movieDetails)
+      setSelectedMovie(movieDetails)
+    });
   };
+
+  console.log('selectedMovie', selectedMovie)
 
   const handleBackToMovies = () => {
     setSelectedMovie(null);
   };
 
+  const fetchMoviePosters = () => {
+    fetch("https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies")
+    .then(response => {
+      console.log(response);
+      return response.json()
+    })
+    .then(posterData => setPosters([...posterData]))
+  }
+  useEffect(() => {
+    fetchMoviePosters();
+  }, [])
   return (
     <main className='App'>
       <div className='header'>
@@ -36,11 +56,11 @@ const [selectedMovie, setSelectedMovie] = useState(null);
       </div>
           {selectedMovie ? (
         <MovieDetails 
-          details={movieDetails} 
+          details={selectedMovie} 
         />
       ) : (
         <MoviesContainer 
-          movies={moviePosters} 
+          movies={posters} 
           onMovieSelect={handleMovieSelect} 
         />
       )}

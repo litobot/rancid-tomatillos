@@ -1,6 +1,7 @@
 import './MovieDetails.css';
 
-function MovieDetails({ details }) {
+function MovieDetails({details}) {
+  console.log(details)
   return (
       <div className='movie-details'>
         <img src={ details.backdrop_path } />
