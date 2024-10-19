@@ -1,6 +1,5 @@
 import './MoviesContainer.css';
 import MoviePoster from '../MoviePoster/MoviePoster';
-import { useState } from 'react';
 
 function MoviesContainer({ movies, incrementVote, decrementVote, onMovieSelect }) {
   

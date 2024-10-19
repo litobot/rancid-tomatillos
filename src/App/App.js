@@ -1,11 +1,8 @@
 import './App.css';
 import searchIcon from '../icons/search.png';
-import moviePosters from '../data/movie_posters';
 import MoviesContainer from '../MoviesContainer/MoviesContainer'
 import MovieDetails from '../MovieDetails/MovieDetails'
-import movieDetails from '../data/movie_details';
 import homeButton from '../icons/home.png'
-// Example imports (for later):
 import { useState, useEffect } from 'react';
 
 
@@ -15,7 +12,6 @@ const [selectedMovie, setSelectedMovie] = useState(null);
 const [posters, setPosters] = useState([])
 
   const handleMovieSelect = (movie) => {
-    console.log(movie)
     fetch(`https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies/${movie.id}`)
     .then(response => response.json())
     .then(movieDetails => {
@@ -23,8 +19,6 @@ const [posters, setPosters] = useState([])
       setSelectedMovie(movieDetails)
     });
   };
-
-  console.log('selectedMovie', selectedMovie)
 
   const handleBackToMovies = () => {
     setSelectedMovie(null);

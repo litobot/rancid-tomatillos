@@ -2,7 +2,6 @@ import './MoviePoster.css';
 import upVote from '../icons/upvote.png'
 import downVote from '../icons/downvote.png'
 import { useState } from 'react';
-import Header from '../Header/Header';
 
 const MoviePoster = ({ posterPath , voteCount, incrementVote, decrementVote, toMovieDetails, posterId }) => {
   const [votes, setVotes] = useState(voteCount)
