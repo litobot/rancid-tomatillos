@@ -1,6 +1,6 @@
 .movie-card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   overflow: hidden;
@@ -30,7 +30,8 @@
 }
 
 .vote-section img {
-  height: 31px;       
+  height: 31px;  
+  width: 30px;     
   cursor: pointer;      
   font-size: 20px;      
 }

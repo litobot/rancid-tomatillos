@@ -1,19 +1,22 @@
 import './MoviesContainer.css';
 import MoviePoster from '../MoviePoster/MoviePoster';
+import { useState } from 'react';
 
-function MoviesContainer({ movies, incrementVote, decrementVote}) {
+function MoviesContainer({ movies, incrementVote, decrementVote, onMovieSelect }) {
+  
   return (
-      <div className='movies-container'>
-        {movies.map((movie)=> (
+    <div className='movies-container'>
+        {movies.map((movie) => (
           <MoviePoster
-            key={movie.id}
-            posterPath={movie.poster_path} 
-            voteCount={movie.vote_count}
-            incrementVote={incrementVote}
-            decrementVote={decrementVote}
-            />
+            key={ movie.id }
+            posterPath={ movie.poster_path } 
+            voteCount={ movie.vote_count }
+            incrementVote={ incrementVote }
+            decrementVote={ decrementVote }
+            toMovieDetails={() => onMovieSelect(movie)}
+          />
         ))}
-      </div>
+    </div>
   );
 }
   
