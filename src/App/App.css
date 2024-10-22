@@ -34,8 +34,6 @@ p {
   padding: 1rem;
 }
 
-.home-button {
-  cursor: pointer; /* Pointer cursor for hover */
-  width: 60px; /* Set width as needed */
-  height: auto; /* Maintain aspect ratio */
+.header img{
+  cursor: pointer;
 }
