@@ -1,8 +1,8 @@
 import './MoviesContainer.css';
 import MoviePoster from '../MoviePoster/MoviePoster';
 
-function MoviesContainer({ movies, incrementVote, decrementVote, onMovieSelect }) {
-  
+
+function MoviesContainer({ movies, onMovieSelect }) {
   return (
     <div className='movies-container'>
         {movies.map((movie) => (
@@ -11,8 +11,6 @@ function MoviesContainer({ movies, incrementVote, decrementVote, onMovieSelect }
             posterId={movie.id}
             posterPath={ movie.poster_path } 
             voteCount={ movie.vote_count }
-            incrementVote={ incrementVote }
-            decrementVote={ decrementVote }
             toMovieDetails={() => onMovieSelect(movie)}
           />
         ))}
