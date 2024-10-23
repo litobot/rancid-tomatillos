@@ -13,7 +13,8 @@ function App() {
   const fetchMoviePosters = () => {
     fetch("https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies")
       .then(response => response.json())
-      .then(posterData => setPosters([...posterData]));
+      .then(posterData => setPosters([...posterData]))
+      .catch;
   };
 
   useEffect(() => {
@@ -40,8 +41,7 @@ function App() {
       </div>
       <Routes>
         <Route path='/' element={<MoviesContainer movies={posters} />} />
-        <Route path='/:movieId([0-9]+1)' element={<MovieDetails />} />
-        <Route path='/*' element={<ErrorCode />} />
+        <Route path='/:movieId' element={<MovieDetails />} />
       </Routes>
     </div>
   );
