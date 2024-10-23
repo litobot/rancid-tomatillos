@@ -4,6 +4,7 @@ import MovieDetails from '../MovieDetails/MovieDetails';
 import homeButton from '../icons/home.png';
 import { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
+import ErrorCode from '../ErrorCode/ErrorCode'
 
 function App() {
   const [posters, setPosters] = useState([]);
@@ -39,7 +40,8 @@ function App() {
       </div>
       <Routes>
         <Route path='/' element={<MoviesContainer movies={posters} />} />
-        <Route path='/:movieId' element={<MovieDetails />} />
+        <Route path='/:movieId([0-9]+1)' element={<MovieDetails />} />
+        <Route path='/*' element={<ErrorCode />} />
       </Routes>
     </div>
   );
