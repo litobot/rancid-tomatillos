@@ -46,9 +46,4 @@ describe('Main Page', () => {
       cy.get('.vote-count').should('contain', startingVoteCount - 1);
     });
   });
-
-  it('it should return a 500 status code if the external API is unreachable', () => {
-    cy.intercept('GET', "https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/");
-    // revisit this in the morning
-  })
 })
