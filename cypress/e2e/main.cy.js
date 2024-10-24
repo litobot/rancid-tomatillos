@@ -11,7 +11,7 @@ describe('Main Page', () => {
     cy.contains('rancid tomatillos');
   });
 
-  it('displays all movies with thier posters and vote counts', () => {
+  it('displays all movies with their posters and vote counts', () => {
     cy.wait('@getMovies');
     cy.get('.movies-container').should('exist');
     cy.get('.movies-container').find('.movie-card').should('have.length', 4);
