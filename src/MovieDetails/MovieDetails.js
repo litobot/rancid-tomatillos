@@ -14,7 +14,7 @@ function MovieDetails() {
         setDetails(movieDetails);
       })
       .catch(error => {
-        console.error('Error fetching movie details:', error);
+        console.log('Error fetching movie details:', error);
       });
   }, [movieId]);
 
