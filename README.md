@@ -28,8 +28,8 @@ https://rancid-tomatillos-roan-eta.vercel.app
 
 ## Screenshots:
 
-![App Screenshot](./assets/MovieDetails.png)
-![App Screenshot](./assets/MoviesContainer.png)
+![Movie Details Screenshot](src/Assets/MovieDetails.png)
+![Movies Container Screenshot](src/Assets/MoviesContainer.png)
 
 
 ## Overview of Project & Goals:
