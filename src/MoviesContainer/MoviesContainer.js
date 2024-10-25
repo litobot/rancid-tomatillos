@@ -2,7 +2,7 @@ import './MoviesContainer.css';
 import MoviePoster from '../MoviePoster/MoviePoster';
 
 
-function MoviesContainer({ movies, onMovieSelect }) {
+function MoviesContainer({ movies }) {
   return (
     <div className='movies-container'>
         {movies.map((movie) => (
@@ -11,7 +11,6 @@ function MoviesContainer({ movies, onMovieSelect }) {
             posterId={movie.id}
             posterPath={ movie.poster_path } 
             voteCount={ movie.vote_count }
-            toMovieDetails={() => onMovieSelect(movie)}
           />
         ))}
     </div>

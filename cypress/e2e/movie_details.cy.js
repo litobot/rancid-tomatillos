@@ -11,8 +11,8 @@ describe('Movie Details', () => {
     cy.wait('@getMovies')
     cy.get('.movie-card').first().click()
     cy.get('@getMovieDetails');
-
   })
+
   it('displays movie details of the movie being clicked', () => {
     cy.get('.image-container').within(() => {
       cy.get('img').should('have.attr','src', details.backdrop_path)

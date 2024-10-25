@@ -25,10 +25,12 @@ https://github.com/litobot
 
 https://rancid-tomatillos-roan-eta.vercel.app
 
+
 ## Screenshots:
 
 ![App Screenshot](./assets/MovieDetails.png)
 ![App Screenshot](./assets/MoviesContainer.png)
+
 
 ## Overview of Project & Goals:
 

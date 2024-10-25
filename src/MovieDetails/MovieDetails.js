@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 function MovieDetails() {
-  const { movieId } = useParams(); 
-  console.log(useParams())
+  const { movieId } = useParams();
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
