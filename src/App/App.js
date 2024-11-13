@@ -1,3 +1,5 @@
+//  THIS IS A TEST
+
 import './App.css';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import MovieDetails from '../MovieDetails/MovieDetails';
